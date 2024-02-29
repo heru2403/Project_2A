@@ -1,0 +1,93 @@
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:background="@color/silver">
+
+	<androidx.cardview.widget.CardView
+		android:layout_width="190dp"
+		android:layout_height="wrap_content"
+		app:cardCornerRadius="10dp"
+		android:layout_marginStart="5dp"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="5dp"
+		android:foreground="?selectableItemBackground"
+		android:clickable="true"
+		android:focusable="true">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<FrameLayout
+				android:layout_width="190dp"
+				android:layout_height="150dp"
+				android:id="@+id/frameGambar">
+
+				<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:src="@drawable/makanan1"
+					android:scaleType="centerCrop"
+					android:id="@+id/imgGambar">
+				</ImageView>
+			</FrameLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/linearDetail"
+				android:orientation="vertical"
+				android:layout_below="@+id/frameGambar"
+				android:layout_marginTop="10dp"
+				android:paddingLeft="10dp"
+				android:paddingRight="5dp"
+				android:layout_marginBottom="15dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Jarak"
+					android:drawableLeft="@drawable/ic_location"
+					android:gravity="center"
+					android:drawableTint="@color/silver"
+					android:layout_marginTop="10dp"
+					android:id="@+id/tvJarak"
+					/>
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_below="@+id/linearDetail"
+				android:id="@+id/linearRatingTerjual"
+				android:paddingLeft="10dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Nama Produk"
+					android:textStyle="bold"
+					android:textColor="@color/black"
+					android:maxLines="1"
+					android:ellipsize="end"
+					android:id="@+id/tvNamaProduk" />
+			</LinearLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/linearRatingTerjual"
+				android:text="4.0"
+				android:gravity="center"
+				android:layout_marginTop="10dp"
+				android:drawableLeft="@drawable/ic_star"
+				android:drawableTint="@color/orange"
+				android:id="@+id/tvRating"/>
+
+		</RelativeLayout>
+	</androidx.cardview.widget.CardView>
+</RelativeLayout>
